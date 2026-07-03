@@ -80,7 +80,12 @@
             <div class="fields-row">
                 <div class="field">
                     <label for="email-destinatario">Destinatario</label>
-                    <input id="email-destinatario" placeholder="Proveedor, operario, seguridad...">
+                                        <input id="email-destinatario" list="destinatarios-list" placeholder="Selecciona o escribe un nombre">
+                    <datalist id="destinatarios-list">
+                        <option value="Celia">
+                        <option value="Renzo">
+                        <option value="Santiago">
+                    </datalist>
                 </div>
                 <div class="field">
                     <label for="email-tono">Tono</label>
