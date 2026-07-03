@@ -2,7 +2,6 @@
 
 Asistente de redacción impulsado por IA para gestionar la comunicación del Centro Vilamarina.
 
-## 🚀 Demo
 
 **URL:** [https://aminepm.github.io/redactor/](https://aminepm.github.io/redactor/)
 
