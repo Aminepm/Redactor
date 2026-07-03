@@ -169,7 +169,8 @@ function buildPrompt(tool) {
     
     switch(tool) {
         case 'email':
-            const destinatario = document.getElementById('email-destinatario').value;
+            const destinatarioSelect = document.getElementById('email-destinatario').value;
+            const destinatario = destinatarioSelect === 'custom' ? document.getElementById('email-destinatario-custom').value : destinatarioSelect;
             const tono = document.getElementById('email-tono').value;
             const asunto = document.getElementById('email-asunto').value;
             const contexto = document.getElementById('email-contexto').value;
@@ -255,3 +256,19 @@ document.addEventListener('click', (e) => {
         toggleApiModal();
     }
 });
+
+// Manejar select de destinatario personalizado
+const emailDestinatarioSelect = document.getElementById('email-destinatario');
+const emailDestinatarioCustom = document.getElementById('email-destinatario-custom');
+
+if (emailDestinatarioSelect) {
+    emailDestinatarioSelect.addEventListener('change', (e) => {
+        if (e.target.value === 'custom') {
+            emailDestinatarioCustom.style.display = 'block';
+            emailDestinatarioCustom.focus();
+        } else {
+            emailDestinatarioCustom.style.display = 'none';
+            emailDestinatarioCustom.value = '';
+        }
+    });
+}
