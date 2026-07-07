@@ -203,7 +203,13 @@
             <div class="form-header"><div>💬</div><h2>Responder mensaje</h2></div>
             <div class="field">
                 <label for="resp-mensaje-original">Mensaje original</label>
-                <textarea id="resp-mensaje-original" placeholder="Pega aquí el mensaje que quieres responder..."></textarea>
+                <t
+                                    <input type="file" id="resp-imagen" accept="image/*" style="display:none">
+                <button type="button" class="btn-upload" onclick="document.getElementById('resp-imagen').click()">📎 Adjuntar imagen</button>
+                <div id="resp-image-preview" style="display:none; margin-top:10px;">
+                    <img id="resp-preview-img" style="max-width:200px; border-radius:8px; border:1px solid var(--border)">
+                    <button type="button" class="btn-remove" onclick="removeImage()">✕ Quitar</button>
+                </div>extarea id="resp-mensaje-original" placeholder="Pega aquí el mensaje que quieres responder..."></textarea>
             </div>
             <div class="field">
                 <label for="resp-puntos">Puntos a incluir en la respuesta</label>
